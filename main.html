@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        background-color: #dbd3d3;
+      }
+    
+      nav {
+        background-color: rgb(0, 0, 70);
+        color: #fff;
+        border-radius: 0px 0px 20px 20px;
+      }
+    
+      navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px 20px 60px;
+      }
+    
+      p {
+        font-size: 8pt;
+        margin-top: 5px;
+      }
+    
+      .ico {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #927f7f;
+        display: flex;
+        top: 18px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .campo {
+        display: flex;
+        justify-content: center;
+        color: #1a0147;
+        font: 400;
+        margin-top: 12px;
+      }
+    
+      .Home {
+        width: 100%;
+        height: 356px;
+        margin-top: 12px;
+      }
+    
+      .foot {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+    
+      .container {
+        display: flex;
+        margin: 20px 20px 0px 20px;
+        border-radius: 2px;
+        box-shadow: 1px 5px 5px #9a9a9a;
+        padding: 10px;
+        gap: 10px;
+    
+        color: rgb(3, 3, 54);
+        font-size: 15px;
+        font-weight: 600;
+    
+        cursor: pointer;
+      }
+
+      .owl-carousel.owl-drag .owl-item{
+        height: 100%;
+      }
+      .no-js .owl-carousel, .owl-carousel.owl-loaded{
+        height: 100%;
+      }
+      .owl-carousel .owl-stage-outer{
+        height: 100%;
+      }
+      .owl-carousel .owl-stage{
+        height: 100%;
+      }
+      .owl-carousel.owl-drag .owl-item{
+        height: 100%;
+      }
+      .item-video{
+        height: 100%;
+      }
+      .owl-carousel .owl-item img{
+        height: 100%;
+      }
+      .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        background: #000046 !important;
+      }
+    </style>
+    
+    <script src="https://kit.fontawesome.com/04e525ee6b.js" crossorigin="anonymous"></script>
+    
+    <title>HABILITAÇÃO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"
+      rel="stylesheet" />
+    
+    
+    
+    </head>
+    
+    <body>
+    
+      <nav>
+        <div class="ico"><i class="fa-solid fa-chevron-left" style="color: #f2f4f8;"></i></div>
+        <navbar>
+    
+          <h4>HABILITAÇÃO</h4>
+          <P>Atualizada em: 02/06/2023 - 11:36:10</P>
+        </navbar>
+      </nav>
+    
+      <section class="campo">
+        Verifique autenticidade do QR Code com o app <span style="color: blue;text-decoration: underline;">Vio</span>
+      </section>
+    
+      <section class="Home">
+        <div class="owl-carousel owl-theme">
+          <div class="item-video" data-merge="1">
+            <img src="CNH/frente.jpeg" alt="" srcset="">
+          </div>
+          <div class="item-video" data-merge="1">
+            <img src="CNH/baixo.jpeg" alt="" srcset="">
+          </div>
+          <div class="item-video" data-merge="1">
+            <img src="CNH/qrcode.jpeg" alt="" srcset="">
+          </div>
+        </div>
+      </section>
+    
+      <section class="foot">
+        <div class="container">
+          <div id="ico"><i class="fa-solid fa-address-card"></i></div>
+          <div class="opt">Histórico da CNH</div>
+        </div>
+        <div class="container">
+          <div id="ico"><i class="fa-sharp fa-solid fa-trash"></i></div>
+          <div class="opt">Remover</div>
+        </div>
+        <div class="container">
+          <div id="ico"><i class="fa-sharp fa-solid fa-trash"></i></div>
+          <div class="opt">Exportar</div>
+        </div>
+      </section>
+    
+      <script type="text/javascript">
+
+
+        (function ($) {
+
+          $('.owl-carousel').owlCarousel({
+            items: 1,
+            merge: true,
+            loop: true,
+            margin: 10,
+            video: true,
+            lazyLoad: true,
+            center: true,
+            afterAction: function (current) {
+
+
+              $(this).find('video').get(0).play();
+            }, responsive: {
+              480: {
+                items: 1
+              },
+              600: {
+                items: 1
+              }
+            }
+
+          });
+
+          $(document).ready(function () {
+            $("video").prop('muted', true);
+
+            $("#mute-video").click(function () {
+
+              $("video").prop('muted', true);
+
+            });
+
+            setTimeout(
+              function () {
+
+                $(".active .owl-video-play-icon").trigger("click");
+              }, 1000);
+          });
+          $(document).on('click', '.owl-dot', function () {
+            if ($('.owl-item.active').hasClass('owl-video-playing')) { } else {
+              setTimeout(
+                function () {
+                  $(".active .owl-video-play-icon").trigger("click");
+                }, 1000);
+            }
+          });
+
+        })(jQuery);
+      </script>
+    </body>
+    
+    </html>
