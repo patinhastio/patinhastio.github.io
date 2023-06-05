@@ -58,8 +58,9 @@
         display: flex;
         justify-content: center;
         color: #1a0147;
-        font: 400;
-        margin-top: 12px;
+        margin-top: 9px;
+        font-size: 8pt;
+        font-weight: 600;
       }
     
       .Home {
@@ -72,7 +73,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-top: 20px;
+        margin: 20px 0px 23px 0px;
       }
     
       .container {
@@ -117,6 +118,36 @@
       .owl-theme .owl-dots .owl-dot span{
         border: 1px solid #000046;
       }
+
+      .fim{
+        background: #fff;
+        margin: -25px 15px 15px 15px;
+        font-size: 8pt;
+      }
+
+      .fim > div {
+        position: relative;
+        margin-left: 20px;
+        top: 20px;
+        margin-top: 26px;
+      }   
+      
+      .fim > div::before {
+        content: ">";
+        position: absolute;
+        right: 30px;
+        font-size: 18pt;
+        bottom: -5px;
+        color: #000046bd;
+      }
+
+      p.underline{
+        width: 328px;
+        border: 1px solid #dbd3d352;
+        margin: 20px 0 -22px 16px;
+      }
+
+      
     </style>
     
     <script src="https://kit.fontawesome.com/04e525ee6b.js" crossorigin="anonymous"></script>
@@ -144,7 +175,7 @@
       </nav>
     
       <section class="campo">
-        Verifique autenticidade do QR Code com o app <span style="color: blue;text-decoration: underline;">Vio</span>
+        Verifique autenticidade do QR Code com o app Vio
       </section>
     
       <section class="Home">
@@ -157,6 +188,12 @@
           </div>
           <div class="item-video" data-merge="1">
             <img src="qrcode.jpeg" alt="" srcset="">
+          </div>
+          <div class="item-video fim" data-merge="1">
+            <div><div><h1>Exames Toxicológicos</h1></div></div>
+            <p class="underline"></p>
+            <div><div><h1>Cursos Especializados</h1></div></div>
+            <p class="underline"></p>
           </div>
         </div>
       </section>
@@ -171,7 +208,7 @@
           <div class="opt">Remover</div>
         </div>
         <div class="container">
-          <div id="ico"><i class="fa-sharp fa-solid fa-trash"></i></div>
+          <div id="ico"><i class="fa-solid fa-file-export"></i></div>
           <div class="opt">Exportar</div>
         </div>
       </section>
@@ -184,7 +221,7 @@
           $('.owl-carousel').owlCarousel({
             items: 1,
             merge: true,
-            loop: true,
+            loop: false,
             margin: 10,
             video: true,
             lazyLoad: true,
