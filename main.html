@@ -36,8 +36,9 @@
       }
     
       p {
-        font-size: 8pt;
+        font-size: 7pt;
         margin-top: 5px;
+        letter-spacing: 1.2px;
       }
     
       .ico {
@@ -163,9 +164,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"
-      rel="stylesheet" />
-    
-    
+      rel="stylesheet" />   
     
     </head>
     
@@ -176,7 +175,7 @@
         <navbar>
     
           <h4>HABILITAÇÃO</h4>
-          <P>Atualizada em: 05/06/2023 - 16:14:10</P>
+          <p id="clock"></p>
         </navbar>
       </nav>
     
@@ -272,7 +271,28 @@
           });
 
         })(jQuery);
+
+        document.addEventListener("DOMContentLoaded", function() {
+    var startTime = new Date();
+
+    function updateClock() {
+      var now = new Date();
+      var elapsedTime = now - startTime;
+      var updatedTime = new Date(startTime.getTime() + elapsedTime);
+
+      var clock = document.getElementById('clock');
+      var date = updatedTime.toLocaleDateString();
+      var time = updatedTime.toLocaleTimeString();
+
+      clock.innerHTML = 'Atualizada em: '+date + ' - ' + time;
+    }
+
+    // Chame a função inicialmente para exibir o horário atual imediatamente
+    updateClock();
+
+    // Remova a chamada para setInterval para parar de atualizar o horário
+  });
       </script>
-    </body>
+</body>
     
-    </html>
+</html>
